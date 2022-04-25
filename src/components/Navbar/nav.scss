@@ -1,0 +1,5 @@
+.nc-MainNav1 {
+  &.notOnTop {
+    @apply bg-[#255d52] backdrop-blur-2xl bg-opacity-70 shadow-sm;
+  }
+}

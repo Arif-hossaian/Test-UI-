@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import AboutCourses from './components/About-Our-Courses/AboutCourses';
+import Banner from './components/Banner';
+import ExploreCourses from './components/Explore-courses/ExploreCourses';
+import Footer from './components/Footer/Footer';
+import JoinWIthUs from './components/Join-with-Us/JoinWIthUs';
+import KeySupporters from './components/Key-supporters/KeySupporters';
+import BlogsAndNewsSection from './components/LatestBlogs-News/BlogsAndNewsSection';
+import { Navbar } from './components/Navbar/Navbar';
+import TopCategories from './components/Top-categories/TopCategories';
+import TotalCourses from './components/Total-courses/TotalCourses';
+import OfferByUs from './components/What-we-offer/OfferByUs';
+import ChoosingUs from './components/Why-choose-us/ChoosingUs';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Router>
+        <Navbar />
+        <Banner />
+        <OfferByUs />
+        <AboutCourses />
+        <TopCategories />
+        <ExploreCourses />
+        <ChoosingUs />
+        <TotalCourses />
+        <JoinWIthUs />
+        <BlogsAndNewsSection />
+        <KeySupporters />
+        <Footer />
+        <Routes>{/* <Route path="*" element={<ErrorPage />} /> */}</Routes>
+      </Router>
     </div>
   );
-}
+};
 
 export default App;
